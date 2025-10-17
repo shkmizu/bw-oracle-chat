@@ -34,9 +34,9 @@ export const ChatInput = ({ onSend, disabled }: ChatInputProps) => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Mande uma pergunta.."
+            placeholder="Digite sua mensagem..."
             disabled={disabled}
-            className="min-h-[60px] pr-12 resize-none"
+            className="min-h-[60px] pr-12 resize-none rounded-xl"
             rows={2}
           />
           <Button

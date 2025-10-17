@@ -100,13 +100,6 @@ const Index = () => {
     }
   };
 
-  const handleRetry = () => {
-    setShowError(false);
-    if (lastUserMessage) {
-      sendMessage(lastUserMessage);
-    }
-  };
-
   const showHome = messages.length === 0 && !isLoading && !showError;
 
   return (
@@ -127,7 +120,7 @@ const Index = () => {
               />
             ))}
             {isLoading && <TypingIndicator />}
-            {showError && <ErrorMessage onRetry={handleRetry} />}
+            {showError && <ErrorMessage onRetry={() => {}} />}
             <div ref={messagesEndRef} />
           </div>
         </div>

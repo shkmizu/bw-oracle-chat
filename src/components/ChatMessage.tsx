@@ -28,16 +28,20 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
   };
 
   return (
-    <div className={`py-6 px-4 ${role === 'assistant' ? 'bg-muted/30' : ''}`}>
+    <div className="py-4 px-4 animate-fade-in">
       <div className="max-w-3xl mx-auto">
-        <div className="flex gap-4">
-          <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold flex-shrink-0">
-            {role === 'user' ? 'U' : 'O'}
-          </div>
-          
-          <div className="flex-1 min-w-0">
-            <div className={`prose prose-sm max-w-none dark:prose-invert ${shouldTruncate ? 'line-clamp-6' : ''}`}>
-              <ReactMarkdown>{content}</ReactMarkdown>
+        <div className={`flex gap-3 ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
+          <div className={`max-w-[80%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
+            <div 
+              className={`rounded-2xl px-4 py-3 ${
+                role === 'user' 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'bg-muted'
+              }`}
+            >
+              <div className={`prose prose-sm max-w-none ${role === 'user' ? 'prose-invert' : 'dark:prose-invert'} ${shouldTruncate ? 'line-clamp-6' : ''}`}>
+                <ReactMarkdown>{content}</ReactMarkdown>
+              </div>
             </div>
             
             {isLongMessage && (
@@ -62,7 +66,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
             )}
             
             {role === 'assistant' && (
-              <div className="flex gap-2 mt-3">
+              <div className="flex gap-2 mt-2">
                 <Button
                   variant="ghost"
                   size="sm"
