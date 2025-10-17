@@ -1,73 +1,95 @@
-# Welcome to your Lovable project
 
-## Project info
+# Chatbot BW Oracle
 
-**URL**: https://lovable.dev/projects/8e04d26a-0c50-46e1-bf9c-80b2c362f546
+Este projeto implementa uma interface de chatbot moderna e funcional desenvolvida para oferecer uma experiência de conversação limpa, responsiva e integrada ao backend do BW Oracle.  
+A aplicação foi projetada com foco em simplicidade visual, usabilidade e princípios sólidos de design de interface (UI/UX).
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧭 Visão Geral
 
-**Use Lovable**
+O **Chatbot BW Oracle** é uma interface web que se conecta a um backend via **webhook** para processar perguntas e respostas em tempo real.  
+Quando o servidor não está acessível, o sistema retorna uma mensagem de erro simples e direta, mantendo a consistência visual da interface.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8e04d26a-0c50-46e1-bf9c-80b2c362f546) and start prompting.
+A interface foi atualizada para seguir padrões de design minimalistas, abandonando tons de roxo e adotando uma paleta em **preto, branco e variações de cinza**, com foco na legibilidade e clareza.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ⚙️ Principais Funcionalidades
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Layout de Conversa Aprimorado**  
+  - Mensagens do **usuário** aparecem à direita.  
+  - Respostas do **chatbot** aparecem à esquerda.  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Interface Limpa e Moderna**  
+  - Paleta de cores neutra (preto, branco, cinza).  
+  - Tipografia padrão: **Inter Family**.  
+  - Animação de “digitando” substituída por **três pontos animados** (sem texto).  
 
-Follow these steps:
+- **Organização Visual**  
+  - O ícone “Ativo” foi movido para **abaixo do texto “BW Oracle”**.  
+  - Remoção do ícone e texto “Usuário” do canto superior esquerdo.  
+  - Ícones e espaçamentos ajustados conforme princípios de UI/UX.  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Botão de Ajuda (Topo Direito)**  
+  - Redireciona o usuário para a **documentação oficial**:  
+    [Documentação BW Oracle](https://docs.google.com/document/d/1-oADp8KV-uubUdUZA4IHD-rMsxEkwPks/edit?usp=drive_link&ouid=115649894980612759848&rtpof=true&sd=true)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Suporte a Tema Claro/Escuro**  
+  - Botão para alternar entre **modo claro e escuro**, mantendo contraste e legibilidade.  
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Tratamento de Erros**  
+  - Caso o chatbot não consiga se conectar ao webhook, exibe uma mensagem simples:  
+    `Erro: não foi possível conectar ao servidor.`  
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🚀 Como Executar
+
+### Pré-requisitos
+- Node.js 18+
+- npm ou yarn
+
+### Instalação
+
+```bash
+git clone https://github.com/seu-repositorio/chatbot-bw-oracle.git
+cd chatbot-bw-oracle
+npm install
+```
+
+### Executar o projeto
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+O servidor local será iniciado (geralmente em `http://localhost:5173`).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🎨 Padrões de Design
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Fonte:** Inter Family  
+- **Cores:** preto, branco e tons neutros de cinza  
+- **Espaçamento:** consistente (mínimo de 8px entre elementos)  
+- **Bordas e sombras suaves** para melhor legibilidade  
+- **Feedback visual claro** em botões e transições de tema  
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🧱 Tecnologias Utilizadas
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **React + TypeScript**
+- **TailwindCSS**
+- **Vite**
+- **Lucide React** (ícones)
+- **Shadcn/UI** (componentes de interface)
+- **Framer Motion** (animações leves)
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/8e04d26a-0c50-46e1-bf9c-80b2c362f546) and click on Share -> Publish.
+## 📄 Licença
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Este projeto é de uso interno e segue as diretrizes da equipe BW Oracle.  
+Distribuição ou reutilização externa requer autorização prévia.
