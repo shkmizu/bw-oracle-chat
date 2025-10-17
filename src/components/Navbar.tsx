@@ -1,4 +1,4 @@
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface NavbarProps {
@@ -23,7 +23,17 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
             variant="ghost" 
             size="icon" 
             className="text-muted-foreground hover:text-foreground"
+            onClick={onThemeToggle}
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="text-muted-foreground hover:text-foreground"
             onClick={() => window.open('https://docs.google.com/document/d/1-oADp8KV-uubUdUZA4IHD-rMsxEkwPks/edit?usp=drive_link&ouid=115649894980612759848&rtpof=true&sd=true', '_blank')}
+            aria-label="Help documentation"
           >
             <HelpCircle className="h-5 w-5" />
           </Button>

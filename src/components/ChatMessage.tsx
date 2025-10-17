@@ -33,9 +33,9 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
         <div className={`flex gap-3 ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
           <div className={`max-w-[80%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
             <div 
-              className={`rounded-2xl px-4 py-3 ${
+              className={`rounded-2xl px-4 py-3 shadow-sm ${
                 role === 'user' 
-                  ? 'bg-primary text-primary-foreground' 
+                  ? 'bg-foreground text-background' 
                   : 'bg-muted'
               }`}
             >
