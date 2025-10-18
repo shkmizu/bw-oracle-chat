@@ -39,6 +39,7 @@ const Index = () => {
   const handleCommand = (command: string): boolean => {
     switch (command) {
       case 'limpar':
+      case 'clear':
         clearHistory();
         toast.success("Histórico limpo com sucesso");
         return true;
@@ -47,6 +48,7 @@ const Index = () => {
         toast.success(`Tema alterado para ${theme === 'light' ? 'escuro' : 'claro'}`);
         return true;
       case 'ajuda':
+      case 'command':
         addMessage('user', `/${command}`);
         addMessage('assistant', getCommandHelp());
         return true;
@@ -54,8 +56,17 @@ const Index = () => {
         addMessage('user', `/${command}`);
         addMessage('assistant', getAboutInfo());
         return true;
+      case 'dani':
+        document.body.style.background = 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)';
+        document.body.style.backgroundSize = '400% 400%';
+        document.body.style.animation = 'gradient 15s ease infinite';
+        const style = document.createElement('style');
+        style.textContent = '@keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }';
+        document.head.appendChild(style);
+        toast.success("Modo Dani ativado! 🌈");
+        return true;
       default:
-        toast.error(`Comando desconhecido: /${command}. Digite /ajuda para ver comandos disponíveis.`);
+        toast.error(`Comando desconhecido: /${command}. Digite /command para ver comandos disponíveis.`);
         return false;
     }
   };

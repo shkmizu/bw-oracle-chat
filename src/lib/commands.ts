@@ -12,10 +12,11 @@ export const parseCommand = (message: string): string | null => {
 export const getCommandHelp = (): string => {
   return `**Comandos Disponíveis:**
 
-- **/limpar** - Limpar histórico do chat
+- **/clear** - Limpar histórico do chat
 - **/tema** - Alternar entre tema claro e escuro
-- **/ajuda** - Mostrar esta mensagem de ajuda
+- **/command** - Mostrar esta mensagem de ajuda
 - **/sobre** - Informações sobre o BW Oracle
+- **/dani** - Ativar modo especial
 
 Digite qualquer comando para executá-lo!`;
 };
