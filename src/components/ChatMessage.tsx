@@ -32,14 +32,8 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
       <div className="max-w-3xl mx-auto">
         <div className={`flex gap-3 ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
           <div className={`max-w-[80%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
-            <div 
-              className={`rounded-2xl px-4 py-3 shadow-sm ${
-                role === 'user' 
-                  ? 'bg-foreground text-background' 
-                  : 'bg-muted'
-              }`}
-            >
-              <div className={`prose prose-sm max-w-none ${role === 'user' ? 'prose-invert' : 'dark:prose-invert'} ${shouldTruncate ? 'line-clamp-6' : ''}`}>
+            <div className="rounded-2xl px-4 py-3 shadow-sm bg-muted">
+              <div className={`prose prose-sm max-w-none dark:prose-invert ${shouldTruncate ? 'line-clamp-6' : ''}`}>
                 <ReactMarkdown>{content}</ReactMarkdown>
               </div>
             </div>
@@ -70,7 +64,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="h-8 px-2 text-muted-foreground hover:text-foreground"
+                  className="h-8 px-2 text-muted-foreground hover:text-foreground hover:bg-accent"
                   onClick={handleCopy}
                 >
                   <Copy className="h-4 w-4" />
@@ -79,7 +73,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="h-8 px-2 text-muted-foreground hover:text-foreground"
+                    className="h-8 px-2 text-muted-foreground hover:text-foreground hover:bg-accent"
                     onClick={onRegenerate}
                   >
                     <RotateCw className="h-4 w-4" />
@@ -88,7 +82,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`h-8 px-2 ${feedback === 'up' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                  className={`h-8 px-2 ${feedback === 'up' ? 'text-primary' : 'text-muted-foreground hover:text-foreground hover:bg-accent'}`}
                   onClick={() => handleFeedback('up')}
                 >
                   <ThumbsUp className="h-4 w-4" />
@@ -96,7 +90,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`h-8 px-2 ${feedback === 'down' ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                  className={`h-8 px-2 ${feedback === 'down' ? 'text-primary' : 'text-muted-foreground hover:text-foreground hover:bg-accent'}`}
                   onClick={() => handleFeedback('down')}
                 >
                   <ThumbsDown className="h-4 w-4" />
