@@ -57,13 +57,13 @@ const Index = () => {
         addMessage('assistant', getAboutInfo());
         return true;
       case 'dani':
-        document.body.style.background = 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)';
-        document.body.style.backgroundSize = '400% 400%';
-        document.body.style.animation = 'gradient 15s ease infinite';
-        const style = document.createElement('style');
-        style.textContent = '@keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }';
-        document.head.appendChild(style);
-        toast.success("Modo Dani ativado! 🌈");
+        const allText = document.querySelectorAll('*');
+        allText.forEach((el) => {
+          if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+            el.textContent = 'Dani';
+          }
+        });
+        toast.success("Modo Dani ativado!");
         return true;
       default:
         toast.error(`Comando desconhecido: /${command}. Digite /command para ver comandos disponíveis.`);

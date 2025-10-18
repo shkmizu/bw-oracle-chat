@@ -16,7 +16,7 @@ export const getCommandHelp = (): string => {
 - **/tema** - Alternar entre tema claro e escuro
 - **/command** - Mostrar esta mensagem de ajuda
 - **/sobre** - Informações sobre o BW Oracle
-- **/dani** - Ativar modo especial
+- **/dani** - Transformar todo texto em "Dani"
 
 Digite qualquer comando para executá-lo!`;
 };
