@@ -13,7 +13,7 @@ Quando o servidor não está acessível, o sistema retorna uma mensagem de erro 
 
 ---
 
-## ⚙️ Principais Funcionalidades
+## Principais Funcionalidades
 
 - **Interface Limpa e Moderna**  
 
@@ -32,7 +32,7 @@ Quando o servidor não está acessível, o sistema retorna uma mensagem de erro 
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Pré-requisitos
 - Node.js 18+
@@ -56,7 +56,7 @@ O servidor local será iniciado (geralmente em `http://localhost:5173`).
 
 ---
 
-## 🎨 Padrões de Design
+## Padrões de Design
 
 - **Fonte:** Inter Family  
 - **Cores:** preto, branco e tons neutros de cinza  
@@ -66,7 +66,7 @@ O servidor local será iniciado (geralmente em `http://localhost:5173`).
 
 ---
 
-## 🧱 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **React + TypeScript**
 - **TailwindCSS**
