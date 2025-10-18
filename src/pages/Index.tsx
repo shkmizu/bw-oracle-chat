@@ -56,15 +56,6 @@ const Index = () => {
         addMessage('user', `/${command}`);
         addMessage('assistant', getAboutInfo());
         return true;
-      case 'dani':
-        const allText = document.querySelectorAll('*');
-        allText.forEach((el) => {
-          if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
-            el.textContent = 'Dani';
-          }
-        });
-        toast.success("Modo Dani ativado!");
-        return true;
       default:
         toast.error(`Comando desconhecido: /${command}. Digite /command para ver comandos disponíveis.`);
         return false;
