@@ -22,7 +22,7 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="text-muted-foreground hover:text-foreground"
+            className="text-foreground/60 hover:text-foreground hover:bg-muted"
             onClick={onThemeToggle}
             aria-label="Toggle theme"
           >
@@ -31,7 +31,7 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="text-muted-foreground hover:text-foreground"
+            className="text-foreground/60 hover:text-foreground hover:bg-muted"
             onClick={() => window.open('https://docs.google.com/document/d/1-oADp8KV-uubUdUZA4IHD-rMsxEkwPks/edit?usp=drive_link&ouid=115649894980612759848&rtpof=true&sd=true', '_blank')}
             aria-label="Help documentation"
           >

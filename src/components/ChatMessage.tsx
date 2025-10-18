@@ -35,7 +35,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
             <div 
               className={`rounded-2xl px-4 py-3 shadow-sm ${
                 role === 'user' 
-                  ? 'bg-foreground text-background' 
+                  ? 'bg-primary text-primary-foreground' 
                   : 'bg-muted'
               }`}
             >
