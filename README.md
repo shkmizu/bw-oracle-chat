@@ -6,30 +6,18 @@ A aplicação foi projetada com foco em simplicidade visual, usabilidade e princ
 
 ---
 
-## 🧭 Visão Geral
+## Visão Geral
 
 O **Chatbot BW Oracle** é uma interface web que se conecta a um backend via **webhook** para processar perguntas e respostas em tempo real.  
 Quando o servidor não está acessível, o sistema retorna uma mensagem de erro simples e direta, mantendo a consistência visual da interface.
-
-A interface foi atualizada para seguir padrões de design minimalistas, abandonando tons de roxo e adotando uma paleta em **preto, branco e variações de cinza**, com foco na legibilidade e clareza.
 
 ---
 
 ## ⚙️ Principais Funcionalidades
 
-- **Layout de Conversa Aprimorado**  
-  - Mensagens do **usuário** aparecem à direita.  
-  - Respostas do **chatbot** aparecem à esquerda.  
-
 - **Interface Limpa e Moderna**  
-  - Paleta de cores neutra (preto, branco, cinza).  
-  - Tipografia padrão: **Inter Family**.  
-  - Animação de “digitando” substituída por **três pontos animados** (sem texto).  
 
 - **Organização Visual**  
-  - O ícone “Ativo” foi movido para **abaixo do texto “BW Oracle”**.  
-  - Remoção do ícone e texto “Usuário” do canto superior esquerdo.  
-  - Ícones e espaçamentos ajustados conforme princípios de UI/UX.  
 
 - **Botão de Ajuda (Topo Direito)**  
   - Redireciona o usuário para a **documentação oficial**:  
@@ -88,8 +76,3 @@ O servidor local será iniciado (geralmente em `http://localhost:5173`).
 - **Framer Motion** (animações leves)
 
 ---
-
-## 📄 Licença
-
-Este projeto é de uso interno e segue as diretrizes da equipe BW Oracle.  
-Distribuição ou reutilização externa requer autorização prévia.
