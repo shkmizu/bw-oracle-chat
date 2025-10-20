@@ -28,7 +28,7 @@ export const ChatInput = ({ onSend, disabled }: ChatInputProps) => {
 
   return (
     <div className="border-t border-border bg-background">
-      <div className="max-w-3xl mx-auto px-4 py-4">
+      <div className="px-4 py-4">
         <form onSubmit={handleSubmit} className="relative">
           <Textarea
             value={input}

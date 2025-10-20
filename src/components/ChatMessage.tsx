@@ -29,9 +29,8 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
 
   return (
     <div className="py-4 px-4 animate-fade-in">
-      <div className="max-w-3xl mx-auto">
-        <div className={`flex gap-3 ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
-          <div className={`max-w-[80%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
+      <div className={`flex gap-3 ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
+        <div className={`max-w-[80%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
             <div className="rounded-2xl px-4 py-3 shadow-sm bg-muted">
               <div className={`prose prose-sm max-w-none dark:prose-invert ${shouldTruncate ? 'line-clamp-6' : ''}`}>
                 <ReactMarkdown>{content}</ReactMarkdown>
@@ -64,7 +63,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="h-8 px-2 text-muted-foreground hover:text-foreground hover:bg-accent"
+                  className="h-8 px-2 text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
                   onClick={handleCopy}
                 >
                   <Copy className="h-4 w-4" />
@@ -73,7 +72,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="h-8 px-2 text-muted-foreground hover:text-foreground hover:bg-accent"
+                    className="h-8 px-2 text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
                     onClick={onRegenerate}
                   >
                     <RotateCw className="h-4 w-4" />
@@ -82,7 +81,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`h-8 px-2 ${feedback === 'up' ? 'text-primary' : 'text-muted-foreground hover:text-foreground hover:bg-accent'}`}
+                  className={`h-8 px-2 transition-colors ${feedback === 'up' ? 'text-primary' : 'text-foreground/60 hover:text-foreground hover:bg-muted'}`}
                   onClick={() => handleFeedback('up')}
                 >
                   <ThumbsUp className="h-4 w-4" />
@@ -90,7 +89,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`h-8 px-2 ${feedback === 'down' ? 'text-primary' : 'text-muted-foreground hover:text-foreground hover:bg-accent'}`}
+                  className={`h-8 px-2 transition-colors ${feedback === 'down' ? 'text-primary' : 'text-foreground/60 hover:text-foreground hover:bg-muted'}`}
                   onClick={() => handleFeedback('down')}
                 >
                   <ThumbsDown className="h-4 w-4" />
@@ -99,7 +98,6 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
             )}
           </div>
         </div>
-      </div>
     </div>
   );
 };
