@@ -39,7 +39,7 @@ Quando o servidor não está acessível, o sistema retorna uma mensagem de erro 
 ### Instalação
 
 ```bash
-git clone https://github.com/seu-repositorio/chatbot-bw-oracle.git
+git clone (https://github.com/shkmizu/bw-oracle-chat.git)
 cd chatbot-bw-oracle
 npm install
 ```
@@ -50,7 +50,7 @@ npm install
 npm run dev
 ```
 
-O servidor local será iniciado (geralmente em `http://localhost:5173`).
+O servidor local será iniciado.
 
 ---
 
