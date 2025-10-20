@@ -15,9 +15,7 @@ Quando o servidor não está acessível, o sistema retorna uma mensagem de erro 
 
 ## Principais Funcionalidades
 
-- **Interface Limpa e Moderna**  
-
-- **Organização Visual**  
+- **Interface Limpa e Moderna**   
 
 - **Botão de Ajuda (Topo Direito)**  
   - Redireciona o usuário para a **documentação oficial**:  
