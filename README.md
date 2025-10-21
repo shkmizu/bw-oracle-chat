@@ -72,7 +72,7 @@ legibilidade e foco.
 -   **Botão de Ajuda (Topo Direito)**\
     Redireciona o usuário à **documentação oficial**:\
     [Documentação BW
-    Oracle](https://docs.google.com/document/d/1-oADp8KV-uubUdUZA4IHD-rMsxEkwPks/edit?usp=drive_link&ouid=115649894980612759848&rtpof=true&sd=true)
+    Oracle](https://drive.google.com/file/d/12JeBfMDv89EowxaS83qCubpBbpDSCAD2/view?usp=drive_link)
 
 -   **Suporte a Tema Claro/Escuro**\
     Alternância de tema sem recarregar a página, mantendo contraste e
