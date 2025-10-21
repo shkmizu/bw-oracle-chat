@@ -21,19 +21,21 @@ Digite qualquer comando para executá-lo!`;
 };
 
 export const getAboutInfo = (): string => {
-  return `**BW Oráculo**
+  return `**BW Oráculo: Assistente de Conhecimento Interno RAG**
 
-**Versão:** 1.0 (Out 20)
+**Versão:** 1.0 
 
-**Sobre:**
-BW Oráculo é um assistente de conhecimento que conecta você às informações da sua base de dados através de uma interface de chat intuitiva.
+**Sobre:** BW Oráculo é um assistente de conhecimento interno da BW Soluções, construído sobre a robusta arquitetura RAG (Retrieval-Augmented Generation). Ele conecta os usuários diretamente à base de dados documental (Google Drive), transformando o conteúdo em conhecimento pesquisável via processamento semântico. O sistema garante respostas contextuais e precisas através de uma interface de chat intuitiva e responsiva.
 
-**Recursos:**
-- Integração webhook em tempo real
-- Suporte a comandos rápidos
-- Temas claro e escuro
-- Histórico de conversas
-- Feedback e regeneração de respostas
+**Arquitetura e Recursos Chave:**
+
+- **Motor RAG (Backend):** Orquestrado via n8n, o fluxo gerencia a ingestão de documentos (Google Drive), a indexação vetorial (Supabase) e a geração de texto contextual (Google Gemini), com memória de conversação via Postgres.
+
+- **Integração Webhook em Tempo Real:** Comunicação ágil e direta entre o Frontend (hospedado no Netlify) e o Backend/n8n (exposto via ngrok).
+
+- **Interface Otimizada:** Layout limpo e responsivo com alternância entre temas claro e escuro.
+
+- **Interação e Qualidade:** Suporte a comandos rápidos, histórico de conversas e ferramentas de Feedback e Regeneração de Respostas para aprimoramento contínuo da IA.
 
 Desenvolvido com React, TypeScript e Tailwind CSS.`;
 };
