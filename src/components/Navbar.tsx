@@ -11,7 +11,7 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
     <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className="px-4 py-3 flex items-center justify-between">
         <div className="flex flex-col">
-          <h1 className="text-lg font-semibold">BW Oracle</h1>
+          <h1 className="text-lg font-semibold">BW Oráculo</h1>
           <div className="flex items-center gap-1.5">
             <div className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--status-active))]" />
             <span className="text-[13px] text-[hsl(var(--status-active))]">Ativo</span>

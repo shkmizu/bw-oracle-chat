@@ -15,18 +15,18 @@ export const getCommandHelp = (): string => {
 - **/clear** - Limpar histórico do chat
 - **/tema** - Alternar entre tema claro e escuro
 - **/command** - Mostrar esta mensagem de ajuda
-- **/sobre** - Informações sobre o BW Oracle
+- **/sobre** - Informações sobre o BW Oráculo
 
 Digite qualquer comando para executá-lo!`;
 };
 
 export const getAboutInfo = (): string => {
-  return `**BW Oracle**
+  return `**BW Oráculo**
 
 **Versão:** 1.0 (Out 20)
 
 **Sobre:**
-BW Oracle é um assistente de conhecimento que conecta você às informações da sua base de dados através de uma interface de chat intuitiva.
+BW Oráculo é um assistente de conhecimento que conecta você às informações da sua base de dados através de uma interface de chat intuitiva.
 
 **Recursos:**
 - Integração webhook em tempo real

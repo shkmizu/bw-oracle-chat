@@ -31,7 +31,7 @@ export const HomeScreen = ({ onCardClick }: HomeScreenProps) => {
     <div className="flex-1 flex flex-col items-center justify-center px-4 py-12 animate-fade-in">
       <div className="w-full">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-2">Oracle</h2>
+          <h2 className="text-5xl font-bold mb-2">Oráculo</h2>
           <p className="text-muted-foreground">Ver 1.0</p>
         </div>
         
