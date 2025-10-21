@@ -32,7 +32,7 @@ export const HomeScreen = ({ onCardClick }: HomeScreenProps) => {
       <div className="w-full">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold mb-2">Oracle</h2>
-          <p className="text-muted-foreground">Ver 1.0 Out 20</p>
+          <p className="text-muted-foreground">Ver 1.0</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
