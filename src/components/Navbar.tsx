@@ -32,7 +32,7 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
             variant="ghost" 
             size="icon" 
             className="text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
-            onClick={() => window.open('https://docs.google.com/document/d/1-oADp8KV-uubUdUZA4IHD-rMsxEkwPks/edit?usp=drive_link&ouid=115649894980612759848&rtpof=true&sd=true', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/12JeBfMDv89EowxaS83qCubpBbpDSCAD2/view?usp=drive_link', '_blank')}
             aria-label="Help documentation"
           >
             <HelpCircle className="h-5 w-5" />
