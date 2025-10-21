@@ -22,8 +22,8 @@ export const HomeScreen = ({ onCardClick }: HomeScreenProps) => {
     {
       icon: Cloud,
       title: "Cloud",
-      description: "Liberação de Usuários VPN",
-      message: "Como liberar usuários VPN?"
+      description: "Criação de Usuário Pritunl VPN",
+      message: "Como criar usuário Pritunl VPN?"
     }
   ];
 
