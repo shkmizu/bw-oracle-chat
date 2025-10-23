@@ -26,15 +26,15 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 43%;
 
-    --accent: 270 70% 70%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 0 0% 90%; /* NEUTRAL GRAY: Usado para hover/active background (tom claro) */
+    --accent-foreground: 0 0% 10%; /* Dark text for high contrast */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 88%;
     --input: 0 0% 88%;
-    --ring: 180 80% 55%;
+    --ring: 0 0% 20%; /* Cor do ring (anél de foco) é a cor principal (escura) */
 
     --status-active: 142 76% 36%;
     
@@ -76,15 +76,15 @@ All colors MUST be HSL.
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 270 70% 70%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 0 0% 20%; /* NEUTRAL GRAY: Usado para hover/active background (tom escuro) */
+    --accent-foreground: 0 0% 98%; /* Light text for high contrast */
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 180 80% 55%;
+    --ring: 0 0% 98%; /* Cor do ring (anél de foco) é a cor principal (clara) */
     
     --status-active: 142 76% 36%;
     --sidebar-background: 0 0% 9%;
