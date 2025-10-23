@@ -33,7 +33,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
         <div className={`max-w-[85%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
             <div className={`rounded-2xl px-5 py-4 ${
               role === 'user' 
-                ? 'bg-card border border-border text-foreground' 
+                ? 'bg-card border border-border text-foreground' // [ALVO] Mensagem do usuário com estilo neutro e borda
                 : 'bg-card border border-border'
             }`}>
               <div className={`prose prose-sm max-w-none ${
