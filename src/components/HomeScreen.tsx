@@ -71,7 +71,7 @@ export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProp
             <Badge
               key={action.label}
               variant="outline"
-              className="px-4 py-2 cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors text-sm" // [ALVO] Mudança de cores aqui
+              className="px-4 py-2 cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors text-sm" // [ALVO] Usa o novo accent (neutro) no hover
               onClick={() => onCardClick(action.topic)}
             >
               <action.icon className="h-4 w-4 mr-2" />
