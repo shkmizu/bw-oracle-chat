@@ -45,7 +45,7 @@ export const ChatInput = ({ onSend, disabled, isHomeScreen }: ChatInputProps) =>
               type="submit"
               size="icon"
               disabled={!input.trim() || disabled}
-              className="m-2 h-10 w-10 rounded-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground" // [ALVO] Mudança de cores aqui
+              className="m-2 h-10 w-10 rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground"
             >
               <Send className="h-5 w-5" />
             </Button>
@@ -72,7 +72,7 @@ export const ChatInput = ({ onSend, disabled, isHomeScreen }: ChatInputProps) =>
             type="submit"
             size="icon"
             disabled={!input.trim() || disabled}
-            className="m-2 h-10 w-10 rounded-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground" // [ALVO] Mudança de cores aqui
+            className="m-2 h-10 w-10 rounded-xl bg-accent hover:bg-accent/90 text-accent-foreground"
           >
             <Send className="h-5 w-5" />
           </Button>
