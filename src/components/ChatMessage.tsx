@@ -33,11 +33,11 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
         <div className={`max-w-[85%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
             <div className={`rounded-2xl px-5 py-4 ${
               role === 'user' 
-                ? 'bg-card border border-border text-foreground' // [ALVO] Estilo Neutro com Borda para o usuário
+                ? 'bg-accent text-accent-foreground' // [ALVO] Usa o cinza de destaque sem borda, alto contraste garantido
                 : 'bg-card border border-border'
             }`}>
               <div className={`prose prose-sm max-w-none ${
-                role === 'user' ? 'prose-invert' : 'dark:prose-invert'
+                role === 'user' ? '' : 'dark:prose-invert' // [ALVO] Remove prose-invert do usuário para garantir a cor de texto correta (neutra/escura no tema claro)
               } ${shouldTruncate ? 'line-clamp-6' : ''}`}>
                 <ReactMarkdown>{content}</ReactMarkdown>
               </div>
