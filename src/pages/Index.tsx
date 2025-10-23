@@ -112,7 +112,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {!showHome && (
-        <div className="w-full max-w-[1000px] mx-auto">
+        <div className="w-full max-w-[800px] mx-auto">
           <Navbar theme={theme} onThemeToggle={toggleTheme} />
         </div>
       )}
@@ -133,7 +133,7 @@ const Index = () => {
       ) : (
         <>
           <div className="flex-1 overflow-y-auto" onScroll={handleScroll}>
-            <div className="w-full max-w-[1000px] mx-auto pb-32">
+            <div className="w-full max-w-[800px] mx-auto pb-32">
               {messages.map((message) => (
                 <ChatMessage
                   key={message.id}
@@ -149,7 +149,7 @@ const Index = () => {
           </div>
           
           <div className="fixed bottom-0 left-0 right-0 bg-background">
-            <div className="w-full max-w-[1000px] mx-auto">
+            <div className="w-full max-w-[800px] mx-auto">
               <ChatInput onSend={sendMessage} disabled={isLoading} />
             </div>
           </div>
