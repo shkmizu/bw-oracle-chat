@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "https://deborah-calamitean-nonpalliatively.ngrok-free.dev/webhook/b948b535-15bd-443a-bbdd-f3ade2db3d5b";
+const WEBHOOK_URL = "https://deborah-calamitean-nonpalliatively.ngrok-free.dev/webhook/b6115aca-da93-45e1-9ed8-277a09c92a97";
 
 export interface WebhookResponse {
   output: string;
