@@ -106,37 +106,50 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <div className="w-full max-w-[1000px] mx-auto">
-        <Navbar theme={theme} onThemeToggle={toggleTheme} />
-      </div>
-      
-      {showHome ? (
+      {!showHome && (
         <div className="w-full max-w-[1000px] mx-auto">
-          <HomeScreen onCardClick={sendMessage} />
-        </div>
-      ) : (
-        <div className="flex-1 overflow-y-auto" onScroll={handleScroll}>
-          <div className="w-full max-w-[1000px] mx-auto pb-32">
-            {messages.map((message) => (
-              <ChatMessage
-                key={message.id}
-                role={message.role}
-                content={message.content}
-                onRegenerate={message.role === 'assistant' ? handleRegenerate : undefined}
-              />
-            ))}
-            {isLoading && <TypingIndicator />}
-            {showError && <ErrorMessage onRetry={() => {}} />}
-            <div ref={messagesEndRef} />
-          </div>
+          <Navbar theme={theme} onThemeToggle={toggleTheme} />
         </div>
       )}
       
-      <div className="fixed bottom-0 left-0 right-0">
-        <div className="w-full max-w-[1000px] mx-auto">
-          <ChatInput onSend={sendMessage} disabled={isLoading} />
+      {showHome ? (
+        <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col justify-center">
+            <HomeScreen 
+              onCardClick={sendMessage} 
+              theme={theme} 
+              onThemeToggle={toggleTheme} 
+            />
+          </div>
+          <div className="pb-8">
+            <ChatInput onSend={sendMessage} disabled={isLoading} isHomeScreen={true} />
+          </div>
         </div>
-      </div>
+      ) : (
+        <>
+          <div className="flex-1 overflow-y-auto" onScroll={handleScroll}>
+            <div className="w-full max-w-[1000px] mx-auto pb-32">
+              {messages.map((message) => (
+                <ChatMessage
+                  key={message.id}
+                  role={message.role}
+                  content={message.content}
+                  onRegenerate={message.role === 'assistant' ? handleRegenerate : undefined}
+                />
+              ))}
+              {isLoading && <TypingIndicator />}
+              {showError && <ErrorMessage onRetry={() => {}} />}
+              <div ref={messagesEndRef} />
+            </div>
+          </div>
+          
+          <div className="fixed bottom-0 left-0 right-0">
+            <div className="w-full max-w-[1000px] mx-auto">
+              <ChatInput onSend={sendMessage} disabled={isLoading} />
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
