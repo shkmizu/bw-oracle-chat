@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 43%;
 
-    --accent: 0 0% 90%; /* NEUTRAL GRAY: Usado para hover/active background (tom claro) */
+    --accent: 0 0% 90%; /* NEUTRAL: Usado para hover/active background (tom claro) */
     --accent-foreground: 0 0% 10%; /* Dark text for high contrast */
 
     --destructive: 0 84% 60%;
@@ -76,7 +76,7 @@ All colors MUST be HSL.
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 20%; /* NEUTRAL GRAY: Usado para hover/active background (tom escuro) */
+    --accent: 0 0% 25%; /* ALVO: Ajustado para 25% para melhor contraste com background 9% */
     --accent-foreground: 0 0% 98%; /* Light text for high contrast */
 
     --destructive: 0 63% 31%;
