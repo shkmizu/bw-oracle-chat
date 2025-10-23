@@ -1,4 +1,4 @@
-import { Search, Sparkles, Star, Cloud } from "lucide-react";
+import { Server, Settings, Cloud } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun, HelpCircle } from "lucide-react";
@@ -12,17 +12,17 @@ interface HomeScreenProps {
 export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProps) => {
   const quickActions = [
     {
-      icon: Search,
+      icon: Server,
       label: "Datadog Agent",
       topic: "Datadog Agent"
     },
     {
-      icon: Sparkles,
+      icon: Settings,
       label: "Instrumentações",
       topic: "Instrumentações"
     },
     {
-      icon: Star,
+      icon: Cloud,
       label: "Cloud",
       topic: "Cloud"
     }

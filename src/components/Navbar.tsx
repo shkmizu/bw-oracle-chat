@@ -22,20 +22,20 @@ export const Navbar = ({ theme, onThemeToggle }: NavbarProps) => {
           <Button 
             variant="ghost" 
             size="icon" 
-            className="text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
-            onClick={onThemeToggle}
-            aria-label="Toggle theme"
-          >
-            {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-          </Button>
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
+            className="text-foreground/60 hover:text-foreground hover:bg-muted transition-colors rounded-full"
             onClick={() => window.open('https://drive.google.com/file/d/12JeBfMDv89EowxaS83qCubpBbpDSCAD2/view?usp=drive_link', '_blank')}
             aria-label="Help documentation"
           >
             <HelpCircle className="h-5 w-5" />
+          </Button>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="text-foreground/60 hover:text-foreground hover:bg-muted transition-colors rounded-full"
+            onClick={onThemeToggle}
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
           </Button>
         </div>
       </div>
