@@ -29,7 +29,7 @@ export const ChatInput = ({ onSend, disabled, isHomeScreen }: ChatInputProps) =>
 
   if (isHomeScreen) {
     return (
-      <div className="w-full px-4 pb-8">
+      <div className="w-full max-w-3xl mx-auto px-4 pb-8">
         <form onSubmit={handleSubmit} className="relative">
           <div className="relative flex items-center bg-card border border-border rounded-2xl shadow-lg overflow-hidden">
             <Textarea
@@ -45,7 +45,7 @@ export const ChatInput = ({ onSend, disabled, isHomeScreen }: ChatInputProps) =>
               type="submit"
               size="icon"
               disabled={!input.trim() || disabled}
-              className="m-2 h-10 w-10 rounded-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground"
+              className="m-2 h-10 w-10 rounded-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground" // [ALVO] Botão neutro com hover neutro
             >
               <Send className="h-5 w-5" />
             </Button>
@@ -56,7 +56,7 @@ export const ChatInput = ({ onSend, disabled, isHomeScreen }: ChatInputProps) =>
   }
 
   return (
-    <div className="w-full px-4 pb-4">
+    <div className="w-full max-w-3xl mx-auto px-4 pb-4">
       <form onSubmit={handleSubmit} className="relative">
         <div className="relative flex items-center bg-card border border-border rounded-2xl shadow-lg overflow-hidden">
           <Textarea
@@ -72,7 +72,7 @@ export const ChatInput = ({ onSend, disabled, isHomeScreen }: ChatInputProps) =>
             type="submit"
             size="icon"
             disabled={!input.trim() || disabled}
-            className="m-2 h-10 w-10 rounded-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground"
+            className="m-2 h-10 w-10 rounded-xl bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground" // [ALVO] Botão neutro com hover neutro
           >
             <Send className="h-5 w-5" />
           </Button>
