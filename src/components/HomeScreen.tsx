@@ -1,49 +1,82 @@
-import { Sparkles, Star, Cloud } from "lucide-react";
-import { QuickStartCard } from "./QuickStartCard";
+import { Server, Settings, Cloud } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun, HelpCircle } from "lucide-react";
 
 interface HomeScreenProps {
   onCardClick: (message: string) => void;
+  theme?: string;
+  onThemeToggle?: () => void;
 }
 
-export const HomeScreen = ({ onCardClick }: HomeScreenProps) => {
-  const cards = [
+export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProps) => {
+  const quickActions = [
     {
-      icon: Sparkles,
-      title: "Datadog Agent",
-      description: "Como instalar o Datadog Agent em..",
-      message: "Como instalar o Datadog Agent?"
+      icon: Server,
+      label: "Datadog Agent",
+      topic: "Datadog Agent"
     },
     {
-      icon: Star,
-      title: "Instrumentações",
-      description: "Como fazer a instrumentação em..",
-      message: "Como fazer a instrumentação?"
+      icon: Settings,
+      label: "Instrumentações",
+      topic: "Instrumentações"
     },
     {
       icon: Cloud,
-      title: "Cloud",
-      description: "Criação de Usuário Pritunl VPN",
-      message: "Como criar usuário Pritunl VPN?"
+      label: "Cloud",
+      topic: "Cloud"
     }
   ];
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center px-4 py-12 animate-fade-in">
-      <div className="w-full">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-2">Oráculo</h2>
-          <p className="text-muted-foreground">Ver 1.0</p>
+    <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 animate-fade-in relative">
+      {/* Theme Toggle and Help in top right */}
+      <div className="absolute top-4 right-4 flex gap-2">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => window.open('https://drive.google.com/file/d/12JeBfMDv89EowxaS83qCubpBbpDSCAD2/view?usp=drive_link', '_blank')}
+          className="rounded-full"
+        >
+          <HelpCircle className="h-5 w-5" />
+        </Button>
+        {onThemeToggle && (
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onThemeToggle}
+            className="rounded-full"
+          >
+            {theme === 'dark' ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
+          </Button>
+        )}
+      </div>
+
+      <div className="w-full max-w-3xl mx-auto text-center space-y-8">
+        {/* Logo/Branding */}
+        <div className="mb-12">
+          <h1 className="text-6xl md:text-7xl font-light tracking-tight mb-3">
+            BW Oráculo
+          </h1>
+          <p className="text-muted-foreground text-sm">Ver 1.0</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {cards.map((card) => (
-            <QuickStartCard
-              key={card.title}
-              icon={card.icon}
-              title={card.title}
-              description={card.description}
-              onClick={() => onCardClick(card.message)}
-            />
+        {/* Quick Action Pills */}
+        <div className="flex flex-wrap justify-center gap-3 mt-8">
+          {quickActions.map((action) => (
+            <Badge
+              key={action.label}
+              variant="outline"
+              className="px-4 py-2 cursor-pointer hover:bg-accent hover:text-accent-foreground transition-colors text-sm" // [ALVO] Mudança de cores aqui
+              onClick={() => onCardClick(action.topic)}
+            >
+              <action.icon className="h-4 w-4 mr-2" />
+              {action.label}
+            </Badge>
           ))}
         </div>
       </div>

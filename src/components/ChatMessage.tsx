@@ -28,11 +28,17 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
   };
 
   return (
-    <div className="py-4 px-4 animate-fade-in">
-      <div className={`flex gap-3 ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
-        <div className={`max-w-[80%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
-            <div className="rounded-2xl px-4 py-3 shadow-sm bg-muted">
-              <div className={`prose prose-sm max-w-none dark:prose-invert ${shouldTruncate ? 'line-clamp-6' : ''}`}>
+    <div className="py-6 px-4 animate-fade-in">
+      <div className={`flex gap-4 ${role === 'user' ? 'justify-end' : 'justify-start'}`}>
+        <div className={`max-w-[85%] ${role === 'user' ? 'order-2' : 'order-1'}`}>
+            <div className={`rounded-2xl px-5 py-4 ${
+              role === 'user' 
+                ? 'bg-card border border-border text-foreground' // [ALVO] Mensagem do usuário com estilo neutro e borda
+                : 'bg-card border border-border'
+            }`}>
+              <div className={`prose prose-sm max-w-none ${
+                role === 'user' ? 'prose-invert' : 'dark:prose-invert'
+              } ${shouldTruncate ? 'line-clamp-6' : ''}`}>
                 <ReactMarkdown>{content}</ReactMarkdown>
               </div>
             </div>
@@ -41,7 +47,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
               <Button
                 variant="ghost"
                 size="sm"
-                className="mt-2 text-primary hover:text-primary"
+                className="mt-2 text-muted-foreground hover:text-foreground"
                 onClick={() => setIsExpanded(!isExpanded)}
               >
                 {isExpanded ? (
@@ -59,11 +65,11 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
             )}
             
             {role === 'assistant' && (
-              <div className="flex gap-2 mt-2">
+              <div className="flex gap-1 mt-3">
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="h-8 px-2 text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
+                  className="h-8 px-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors rounded-lg"
                   onClick={handleCopy}
                 >
                   <Copy className="h-4 w-4" />
@@ -72,7 +78,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="h-8 px-2 text-foreground/60 hover:text-foreground hover:bg-muted transition-colors"
+                    className="h-8 px-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors rounded-lg"
                     onClick={onRegenerate}
                   >
                     <RotateCw className="h-4 w-4" />
@@ -81,7 +87,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`h-8 px-2 transition-colors ${feedback === 'up' ? 'text-primary' : 'text-foreground/60 hover:text-foreground hover:bg-muted'}`}
+                  className={`h-8 px-2 transition-colors rounded-lg ${feedback === 'up' ? 'text-accent' : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}
                   onClick={() => handleFeedback('up')}
                 >
                   <ThumbsUp className="h-4 w-4" />
@@ -89,7 +95,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 <Button
                   variant="ghost"
                   size="sm"
-                  className={`h-8 px-2 transition-colors ${feedback === 'down' ? 'text-primary' : 'text-foreground/60 hover:text-foreground hover:bg-muted'}`}
+                  className={`h-8 px-2 transition-colors rounded-lg ${feedback === 'down' ? 'text-accent' : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'}`}
                   onClick={() => handleFeedback('down')}
                 >
                   <ThumbsDown className="h-4 w-4" />
