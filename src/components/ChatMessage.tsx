@@ -37,7 +37,7 @@ export const ChatMessage = ({ role, content, onRegenerate }: ChatMessageProps) =
                 : 'bg-card border border-border'
             }`}>
               <div className={`prose prose-sm max-w-none ${
-                role === 'user' ? '' : 'dark:prose-invert' // [ALVO] Remove prose-invert do usuário para garantir a cor de texto correta (neutra/escura no tema claro)
+                role === 'user' ? 'dark:prose-invert' : 'dark:prose-invert' // [ALVO] Garante que a cor do texto do usuário se inverta corretamente
               } ${shouldTruncate ? 'line-clamp-6' : ''}`}>
                 <ReactMarkdown>{content}</ReactMarkdown>
               </div>
