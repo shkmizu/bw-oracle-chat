@@ -62,12 +62,17 @@ const Index = () => {
     }
   };
 
-  const sendMessage = async (message: string) => {
+  const sendMessage = async (message: string, isTopicSelection: boolean = false) => {
     if (isSlashCommand(message)) {
       const command = parseCommand(message);
       if (command) {
         handleCommand(command);
       }
+      return;
+    }
+
+    if (isTopicSelection) {
+      addMessage('assistant', `Você selecionou o tópico **${message}**. Por favor, especifique melhor qual tipo de busca você gostaria de fazer sobre este assunto.`);
       return;
     }
 
@@ -116,7 +121,7 @@ const Index = () => {
         <div className="flex-1 flex flex-col">
           <div className="flex-1 flex flex-col justify-center">
             <HomeScreen 
-              onCardClick={sendMessage} 
+              onCardClick={(topic) => sendMessage(topic, true)} 
               theme={theme} 
               onThemeToggle={toggleTheme} 
             />
@@ -143,7 +148,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="fixed bottom-0 left-0 right-0">
+          <div className="fixed bottom-0 left-0 right-0 bg-background">
             <div className="w-full max-w-[1000px] mx-auto">
               <ChatInput onSend={sendMessage} disabled={isLoading} />
             </div>

@@ -14,22 +14,17 @@ export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProp
     {
       icon: Search,
       label: "Datadog Agent",
-      message: "Como instalar o Datadog Agent?"
+      topic: "Datadog Agent"
     },
     {
       icon: Sparkles,
       label: "Instrumentações",
-      message: "Como fazer a instrumentação?"
+      topic: "Instrumentações"
     },
     {
       icon: Star,
       label: "Cloud",
-      message: "Como criar usuário Pritunl VPN?"
-    },
-    {
-      icon: Cloud,
-      label: "Documentação",
-      message: "Onde encontro a documentação?"
+      topic: "Cloud"
     }
   ];
 
@@ -77,7 +72,7 @@ export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProp
               key={action.label}
               variant="outline"
               className="px-4 py-2 cursor-pointer hover:bg-accent/50 transition-colors text-sm"
-              onClick={() => onCardClick(action.message)}
+              onClick={() => onCardClick(action.topic)}
             >
               <action.icon className="h-4 w-4 mr-2" />
               {action.label}
