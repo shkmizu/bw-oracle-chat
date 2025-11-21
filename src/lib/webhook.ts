@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "https://https://unregularized-adina-radiotelegraphic.ngrok-free.dev/webhook/b6115aca-da93-45e1-9ed8-277a09c92a97";
+const WEBHOOK_URL = "https://unregularized-adina-radiotelegraphic.ngrok-free.dev/webhook/b6115aca-da93-45e1-9ed8-277a09c92a97";
 
 export interface WebhookResponse {
   output: string;
