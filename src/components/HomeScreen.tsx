@@ -60,9 +60,9 @@ export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProp
         {/* Logo/Branding */}
         <div className="mb-12">
           <h1 className="text-6xl md:text-7xl font-light tracking-tight mb-3">
-            BW Oráculo
+            Avents
           </h1>
-          <p className="text-muted-foreground text-sm">Ver 1.0</p>
+          <p className="text-muted-foreground text-sm">V1.2</p>
         </div>
         
         {/* Quick Action Pills */}
