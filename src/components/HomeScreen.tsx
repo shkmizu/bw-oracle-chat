@@ -1,7 +1,7 @@
 import { Server, Settings, Cloud } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, HelpCircle } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 
 interface HomeScreenProps {
   onCardClick: (message: string) => void;
@@ -30,17 +30,9 @@ export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProp
 
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 animate-fade-in relative">
-      {/* Theme Toggle and Help in top right */}
-      <div className="absolute top-4 right-4 flex gap-2">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={() => window.open('https://drive.google.com/file/d/1RxSP671XriL7QHdipQjWFJxx10mwNcMh/view?usp=drive_link', '_blank')}
-          className="rounded-full"
-        >
-          <HelpCircle className="h-5 w-5" />
-        </Button>
-        {onThemeToggle && (
+      {/* Theme Toggle in top right */}
+      {onThemeToggle && (
+        <div className="absolute top-4 right-4">
           <Button
             variant="ghost"
             size="icon"
@@ -53,8 +45,8 @@ export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProp
               <Moon className="h-5 w-5" />
             )}
           </Button>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="w-full max-w-3xl mx-auto text-center space-y-8">
         {/* Logo/Branding */}
