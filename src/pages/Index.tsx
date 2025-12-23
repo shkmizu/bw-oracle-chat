@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Navbar } from "@/components/Navbar";
 import { HomeScreen } from "@/components/HomeScreen";
 import { ChatMessage } from "@/components/ChatMessage";
@@ -35,6 +35,23 @@ const Index = () => {
     const isAtBottom = scrollHeight - scrollTop - clientHeight < 50;
     setShouldAutoScroll(isAtBottom);
   };
+
+  // Keyboard shortcuts
+  const handleKeyboardShortcuts = useCallback((e: KeyboardEvent) => {
+    // Ctrl+Shift+L - Clear chat
+    if (e.ctrlKey && e.shiftKey && e.key === 'L') {
+      e.preventDefault();
+      if (messages.length > 0) {
+        clearHistory();
+        toast.success("Histórico limpo com sucesso");
+      }
+    }
+  }, [messages.length, clearHistory]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyboardShortcuts);
+    return () => window.removeEventListener('keydown', handleKeyboardShortcuts);
+  }, [handleKeyboardShortcuts]);
 
   const handleCommand = (command: string): boolean => {
     switch (command) {
