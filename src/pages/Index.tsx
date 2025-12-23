@@ -113,7 +113,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-background">
       {!showHome && (
         <div className="w-full max-w-[800px] mx-auto">
-          <Navbar theme={theme} onThemeToggle={toggleTheme} />
+          <Navbar theme={theme} onThemeToggle={toggleTheme} onClearChat={clearHistory} />
         </div>
       )}
       
