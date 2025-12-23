@@ -35,7 +35,7 @@ export const HomeScreen = ({ onCardClick, theme, onThemeToggle }: HomeScreenProp
         <Button
           variant="ghost"
           size="icon"
-          onClick={() => window.open('https://drive.google.com/file/d/12JeBfMDv89EowxaS83qCubpBbpDSCAD2/view?usp=drive_link', '_blank')}
+          onClick={() => window.open('https://drive.google.com/file/d/1RxSP671XriL7QHdipQjWFJxx10mwNcMh/view?usp=drive_link', '_blank')}
           className="rounded-full"
         >
           <HelpCircle className="h-5 w-5" />
