@@ -1,5 +1,22 @@
-import { HelpCircle, Moon, Sun, Trash2 } from "lucide-react";
+import { HelpCircle, Moon, Sun, MessageSquarePlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface NavbarProps {
   theme: 'light' | 'dark';
@@ -21,15 +38,39 @@ export const Navbar = ({ theme, onThemeToggle, onClearChat }: NavbarProps) => {
         
         <div className="flex items-center gap-2">
           {onClearChat && (
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="text-foreground/60 hover:text-destructive hover:bg-muted transition-colors rounded-full"
-              onClick={onClearChat}
-              aria-label="Clear chat history"
-            >
-              <Trash2 className="h-5 w-5" />
-            </Button>
+            <TooltipProvider>
+              <Tooltip>
+                <AlertDialog>
+                  <TooltipTrigger asChild>
+                    <AlertDialogTrigger asChild>
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="text-foreground/60 hover:text-foreground hover:bg-muted transition-colors rounded-full"
+                        aria-label="New chat"
+                      >
+                        <MessageSquarePlus className="h-5 w-5" />
+                      </Button>
+                    </AlertDialogTrigger>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Nova conversa (Ctrl+Shift+L)</p>
+                  </TooltipContent>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>Iniciar nova conversa?</AlertDialogTitle>
+                      <AlertDialogDescription>
+                        Isso irá limpar todo o histórico da conversa atual. Esta ação não pode ser desfeita.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>Cancelar</AlertDialogCancel>
+                      <AlertDialogAction onClick={onClearChat}>Confirmar</AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
+              </Tooltip>
+            </TooltipProvider>
           )}
           <Button 
             variant="ghost" 
