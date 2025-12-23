@@ -1,4 +1,4 @@
-import { HelpCircle, Moon, Sun, MessageSquarePlus } from "lucide-react";
+import { Moon, Sun, MessageSquarePlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   AlertDialog,
@@ -72,15 +72,6 @@ export const Navbar = ({ theme, onThemeToggle, onClearChat }: NavbarProps) => {
               </Tooltip>
             </TooltipProvider>
           )}
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            className="text-foreground/60 hover:text-foreground hover:bg-muted transition-colors rounded-full"
-            onClick={() => window.open('https://drive.google.com/file/d/1RxSP671XriL7QHdipQjWFJxx10mwNcMh/view?usp=drive_link', '_blank')}
-            aria-label="Help documentation"
-          >
-            <HelpCircle className="h-5 w-5" />
-          </Button>
           <Button 
             variant="ghost" 
             size="icon" 
